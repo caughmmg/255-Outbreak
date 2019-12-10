@@ -42,6 +42,11 @@ namespace Caughman
         
         void Update()
         {
+            if(currentState == null)
+            {
+                currentState = new StatePursue();
+            }
+
             EnemyState newState = currentState.Update();
             ChangeState(newState);
 

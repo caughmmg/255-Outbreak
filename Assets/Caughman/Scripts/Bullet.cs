@@ -64,7 +64,7 @@ namespace Caughman
                 dt.TakeDamage(damageAmount);//hurt the thing we hit
                 Destroy(gameObject);//remove bullet after hit
 
-                gameObject.BroadcastMessage("Hit");
+                //gameObject.BroadcastMessage("Hit");
 
                 return;
             }
