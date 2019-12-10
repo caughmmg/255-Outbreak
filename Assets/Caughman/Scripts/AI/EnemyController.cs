@@ -38,14 +38,13 @@ namespace Caughman
         /// </summary>
         public bool bossBeserk = false;
 
-
+        void Start()
+        {
+            ChangeState(new StateIdle());
+        }
         
         void Update()
         {
-            if(currentState == null)
-            {
-                currentState = new StatePursue();
-            }
 
             EnemyState newState = currentState.Update();
             ChangeState(newState);
@@ -73,7 +72,8 @@ namespace Caughman
         {
             if (newState != null)
             {
-                if(currentState != null) currentState.onEnd();
+                Debug.Log("help");
+                if (currentState != null) currentState.onEnd();
                 currentState = newState;
                 currentState.onBegin(this);
             }

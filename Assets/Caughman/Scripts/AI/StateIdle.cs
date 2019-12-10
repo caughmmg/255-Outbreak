@@ -12,11 +12,11 @@ namespace Caughman {
         /// <returns></returns>
         public override EnemyState Update()
         {
-            if (enemy == null) return null;
+            
             if (enemy.attackTarget == null) return null;
 
             //////// BEHAVIOUR:
-           // Debug.Log("I'm idling");
+            //Debug.Log("I'm idling");
 
 
             //////// TRANSITIONS TO OTHER STATES:
@@ -31,10 +31,11 @@ namespace Caughman {
         //Transition to StateDeathsDoor if under 1000 hp
             if(enemy.bossBeserk == true)
             {
-                //return new StateDeathsDoor();
+                return new StateDeathsDoor();
             }
 
             //Keep Current State
+
             return null;
         }
     }

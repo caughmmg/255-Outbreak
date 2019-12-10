@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Caughman
 {
-    public abstract class StateDeathsDoor : EnemyState
+    public class StateDeathsDoor : EnemyState
     {
         /// <summary>
         /// time in seconds it takes to fire another shot

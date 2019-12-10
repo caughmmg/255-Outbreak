@@ -38,7 +38,7 @@ namespace Caughman {
             //Transition to StateDeathsDoor if under 1000 hp
             if (enemy.bossBeserk == true)
             {
-               // return new StateDeathsDoor();
+               return new StateDeathsDoor();
             }
 
             return null; 

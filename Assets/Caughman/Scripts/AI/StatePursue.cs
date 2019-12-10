@@ -13,7 +13,8 @@ public override EnemyState Update()
             //Debug.Log("I'm Pursuing");
 
             //move towards the player
-            Vector3 disToPlayer = enemy.attackTarget.position - enemy.transform.position;
+            Vector3 disToPlayer; 
+               disToPlayer = enemy.attackTarget.position - enemy.transform.position; 
             Vector3 dirToPlayer = disToPlayer.normalized;
             enemy.velocity += dirToPlayer * enemy.acceleration * Time.deltaTime;
 
@@ -36,7 +37,7 @@ public override EnemyState Update()
 
             if (enemy.bossBeserk == true)
             {
-                //return new StateDeathsDoor();
+               return new StateDeathsDoor();
             }
 
             return null;
